@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
 import { TruckIcon, ShieldCheckIcon, ArrowLeftCircleIcon, MessageCircleIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Hero = () => {
-  const router = useRouter();
   return (
     <section className="relative h-[80vh] bg-gradient-to-r from-stone-100 to-stone-200 overflow-hidden">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/assets/hero-bg.jpg"
           alt="Modern living room"
           className="w-full h-full object-cover"

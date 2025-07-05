@@ -66,7 +66,7 @@ const SurveyPopup = () => {
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
               <p className="text-stone-600 text-sm">
-                We'd love to hear about your shopping experience on our site. This would help us improve our services!
+                We&apos;d love to hear about your shopping experience on our site. This would help us improve our services!
               </p>
               
               <div>

@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { X, Minus, Plus } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
-import CheckoutModal from '@/components/CheckoutModal';
+import CheckoutModal from './CheckoutModal';
+import Image from 'next/image';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -48,7 +49,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
               <div className="space-y-4">
                 {cart.map((item) => (
                   <div key={item.id} className="flex items-center space-x-4 bg-stone-50 p-4 rounded-lg">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
                       className="w-16 h-16 object-cover rounded-lg"

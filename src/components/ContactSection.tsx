@@ -34,7 +34,7 @@ const ContactSection = () => {
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Have a question about our furniture or need design advice?
             <br />
-            We'd love to hear from you.
+            We&apos;d love to hear from you.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const ContactSection = () => {
               </CardContent>
             </Card>
           </div>
-    
+
           <div>
             <Card>
               <CardHeader>

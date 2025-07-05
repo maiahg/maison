@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { Product, useCart } from '@/context/CartContext';
+import Image from 'next/image';
 
 interface ProductModalProps {
   product: Product;
@@ -38,7 +39,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
                 SALE
               </div>
             )}
-            <img
+            <Image
               src={product.image}
               alt={product.name}
               className="w-full h-full object-cover"

@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import ProductGrid from '@/components/ProductGrid';
 import SurveyPopup from '@/components/SurveyPopup';
 import { CartProvider } from '@/context/CartContext';
+import Image from 'next/image';
 import React from 'react';
 
 const Products = () => {
@@ -11,9 +12,8 @@ const Products = () => {
       <div className="min-h-screen bg-stone-50">
         <Header />
         
-        {/* Products Hero Section */}
         <section className="relative h-64">
-        <img
+        <Image
           src="/assets/products-hero.jpg"
           alt="Modern living room"
           className="w-full h-full object-cover"

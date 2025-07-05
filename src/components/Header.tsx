@@ -15,8 +15,7 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
   } from "@/components/ui/navigation-menu";
-  import { cn } from "@/lib/utils";
-  import Link from "next/link";
+import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
 const Header = () => {

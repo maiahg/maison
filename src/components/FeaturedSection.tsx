@@ -1,11 +1,9 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
 
 const FeaturedSection = () => {
-  const router = useRouter();
   const categories = [
     {
       name: "Living Room",
@@ -44,7 +42,7 @@ const FeaturedSection = () => {
               className="group cursor-pointer"
             >
               <div className="relative aspect-square rounded-2xl overflow-hidden mb-4">
-                <img
+                <Image
                   src={category.image}
                   alt={category.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -72,13 +70,13 @@ const FeaturedSection = () => {
             </h2>
             <p className="text-stone-600 mb-8 text-lg leading-relaxed">
               At MAISON, we believe that furniture is more than just functional
-              pieces – it's about creating spaces that reflect your personality
-              and enhance your daily life. Founded in 2025, we've been dedicated
+              pieces – it&apos;s about creating spaces that reflect your personality
+              and enhance your daily life. Founded in 2025, we&apos;ve been dedicated
               to bringing you modern, high-quality furniture that combines
               style, comfort, and affordability.
               <br />
-              We're passionate about helping you create the home of your dreams.
-              Whether you're furnishing your first apartment or redesigning your
+              We&apos;re passionate about helping you create the home of your dreams.
+              Whether you&apos;re furnishing your first apartment or redesigning your
               family home, we provide carefully curated pieces that stand the
               test of time.
             </p>
@@ -90,7 +88,7 @@ const FeaturedSection = () => {
             </button>
           </div>
           <div className="relative">
-            <img
+            <Image
               src="/assets/armchair.jpg"
               alt="Modern living room"
               className="w-full rounded-2xl shadow-2xl"

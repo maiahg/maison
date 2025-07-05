@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, X } from 'lucide-react';
 import { products } from '@/data/products';
 import { Product } from '@/context/CartContext';
+import Image from 'next/image';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -63,7 +64,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onProductSel
         <div className="max-h-80 overflow-y-auto">
           {searchQuery.trim() && filteredProducts.length === 0 && (
             <div className="p-8 text-center text-stone-500">
-              <p>No products found for "{searchQuery}"</p>
+              <p>No products found for &quot;{searchQuery}&quot;</p>
             </div>
           )}
           
@@ -73,7 +74,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onProductSel
               onClick={() => handleProductClick(product)}
               className="w-full p-4 hover:bg-stone-50 transition-colors flex items-center space-x-4 text-left"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className="w-12 h-12 object-cover rounded-lg"
