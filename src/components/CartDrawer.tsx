@@ -22,7 +22,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+      <div className="fixed inset-0 bg-black/50 z-50">
         <div className="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl">
           <div className="flex items-center justify-between p-6 border-b border-stone-200">
             <h2 className="text-xl font-semibold text-stone-900">Shopping Cart</h2>
