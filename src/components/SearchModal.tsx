@@ -77,6 +77,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onProductSel
               <Image
                 src={product.image}
                 alt={product.name}
+                width={1000}
+                height={1000}
                 className="w-12 h-12 object-cover rounded-lg"
               />
               <div className="flex-1">

@@ -28,20 +28,22 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
             onClick={onClose}
             className="p-2 hover:bg-stone-100 rounded-full transition-colors"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5 cursor-pointer" />
           </button>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 p-6">
-          <div className="aspect-square overflow-hidden rounded-xl">
+          <div className="aspect-square overflow-hidden rounded-xl relative">
             {product.isOnSale && (
-              <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+              <div className="absolute bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
                 SALE
               </div>
             )}
             <Image
               src={product.image}
               alt={product.name}
+              width={1000}
+              height={1000}
               className="w-full h-full object-cover"
             />
           </div>
@@ -87,7 +89,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
             <div className="pt-6 border-t border-stone-200">
               <button
                 onClick={handleAddToCart}
-                className="w-full bg-stone-900 text-white py-4 rounded-lg hover:bg-stone-800 transition-colors duration-200 font-medium text-lg"
+                className="w-full bg-stone-900 text-white py-4 rounded-lg hover:bg-stone-800 transition-colors duration-200 font-medium text-lg cursor-pointer"
               >
                 Add to Cart - ${product.price}
               </button>

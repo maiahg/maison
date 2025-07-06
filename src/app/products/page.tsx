@@ -16,6 +16,8 @@ const Products = () => {
         <Image
           src="/assets/products-hero.jpg"
           alt="Modern living room"
+          width={1000}
+          height={1000}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50"></div>

@@ -30,7 +30,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className="p-2 hover:bg-stone-100 rounded-full transition-colors"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5 cursor-pointer" />
             </button>
           </div>
 
@@ -40,7 +40,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                 <p className="text-stone-500 mb-4">Your cart is empty</p>
                 <button
                   onClick={onClose}
-                  className="text-stone-900 hover:underline"
+                  className="text-stone-900 hover:underline cursor-pointer"
                 >
                   Continue Shopping
                 </button>
@@ -52,6 +52,8 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                     <Image
                       src={item.image}
                       alt={item.name}
+                      width={100}
+                      height={100}
                       className="w-16 h-16 object-cover rounded-lg"
                     />
                     <div className="flex-1">
@@ -63,21 +65,21 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         className="p-1 hover:bg-stone-200 rounded"
                       >
-                        <Minus className="h-4 w-4" />
+                        <Minus className="h-4 w-4 cursor-pointer" />
                       </button>
                       <span className="w-8 text-center text-sm">{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                         className="p-1 hover:bg-stone-200 rounded"
                       >
-                        <Plus className="h-4 w-4" />
+                        <Plus className="h-4 w-4 cursor-pointer" />
                       </button>
                     </div>
                     <button
                       onClick={() => removeFromCart(item.id)}
                       className="text-red-500 hover:text-red-700 p-1"
                     >
-                      <X className="h-4 w-4" />
+                      <X className="h-4 w-4 cursor-pointer" />
                     </button>
                   </div>
                 ))}
@@ -93,7 +95,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
               </div>
               <button
                 onClick={handleCheckout}
-                className="w-full bg-stone-900 text-white py-3 rounded-lg hover:bg-stone-800 transition-colors duration-200 font-medium"
+                className="w-full bg-stone-900 text-white py-3 rounded-lg hover:bg-stone-800 transition-colors duration-200 font-medium cursor-pointer"
               >
                 Proceed to Checkout
               </button>

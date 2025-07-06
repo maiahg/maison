@@ -18,7 +18,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
     
     address: '',
     city: '',
-    state: '',
+    province: '',
     zipCode: '',
     country: '',
     
@@ -119,9 +119,9 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
               />
               <input
                 type="text"
-                name="state"
-                placeholder="State"
-                value={formData.state}
+                name="province"
+                placeholder="Province"
+                value={formData.province}
                 onChange={handleInputChange}
                 className="p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-stone-500 focus:border-transparent"
                 required
@@ -223,7 +223,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
             </p>
             <button
               onClick={onClose}
-              className="bg-stone-900 text-white px-8 py-3 rounded-lg hover:bg-stone-800 transition-colors duration-200"
+              className="bg-stone-900 text-white px-8 py-3 rounded-lg hover:bg-stone-800 transition-colors duration-200 cursor-pointer"
             >
               Continue Shopping
             </button>
@@ -246,7 +246,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="p-2 hover:bg-stone-100 rounded-full transition-colors"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5 cursor-pointer" />
           </button>
         </div>
         
@@ -280,14 +280,14 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setStep(step - 1)}
-                  className="px-6 py-3 border border-stone-300 text-stone-700 rounded-lg hover:bg-stone-50 transition-colors duration-200"
+                  className="px-6 py-3 border border-stone-300 text-stone-700 rounded-lg hover:bg-stone-50 transition-colors duration-200 cursor-pointer"
                 >
                   Back
                 </button>
               )}
               <button
                 type="submit"
-                className={`px-8 py-3 bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition-colors duration-200 ${
+                className={`px-8 py-3 bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition-colors duration-200 cursor-pointer ${
                   step === 1 ? 'ml-auto' : ''
                 }`}
               >

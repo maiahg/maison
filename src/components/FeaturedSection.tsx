@@ -45,6 +45,8 @@ const FeaturedSection = () => {
                 <Image
                   src={category.image}
                   alt={category.name}
+                  width={1000}
+                  height={1000}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50"></div>
@@ -91,6 +93,8 @@ const FeaturedSection = () => {
             <Image
               src="/assets/armchair.jpg"
               alt="Modern living room"
+              width={1000}
+              height={1000}
               className="w-full rounded-2xl shadow-2xl"
             />
           </div>
