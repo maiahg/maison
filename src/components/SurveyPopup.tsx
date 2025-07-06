@@ -15,7 +15,7 @@ const SurveyPopup = () => {
       if (!hasSeenSurvey) {
         setIsVisible(true);
       }
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,6 +30,7 @@ const SurveyPopup = () => {
   };
 
   const handleClose = () => {
+    localStorage.setItem('hasSeenSurvey', 'true');
     setIsVisible(false);
   };
 
